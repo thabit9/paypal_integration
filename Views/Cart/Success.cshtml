@@ -1,0 +1,11 @@
+@{
+    ViewData["Title"] = "PayPal Success";
+    Layout = null;
+}
+
+<h1>Payment Successful!</h1>
+<p class="text-muted">@ViewBag.paypalResult.PayerFirstName</p><br />
+<p class="text-muted">@ViewBag.paypalResult.PayerLastName</p><br />
+<p class="text-muted">@ViewBag.paypalResult.PayerEmail</p><br />
+<p class="text-muted">@ViewBag.paypalResult.InvoiceNumber</p><br />
+<p class="text-muted">@ViewBag.paypalResult.GrossTotal</p>

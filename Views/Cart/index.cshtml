@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Testing PayPal Integration";
+    Layout = null;
+}
+
+<h3>Cart Page</h3>
+@{
+    var i = 1;
+}
+<form method="post" enctype="multipart/form-data" action="@ViewBag.payPalConfig.PostUrl">  
+    <input type="hidden" name="upload" value="1"/>
+    <input type="hidden" name="return" value="@ViewBag.payPalConfig.ReturnUrl"/>
+    <input type="hidden" name="cmd" value="_cart"/>
+    <input type="hidden" name="business" value="@ViewBag.payPalConfig.Business"/>
+    <input type="hidden" name="upload" value="1"/>                            
+    @foreach (var productInfo in ViewBag.products)
+    {
+        <input type="hidden" name="item_number_@i" value="@productInfo.ProdID" />
+        <input type="hidden" name="item_name_@i" value="@Html.Encode(productInfo.Description.ToString()).Substring(0,50)" />
+        <input type="hidden" name="amount_@i" value="@productInfo.PurchasePrice" />
+        <input type="hidden" name="quantity_@i" value="@productInfo.Quantity" />
+        i++;
+    }
+    <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" />
+</form>

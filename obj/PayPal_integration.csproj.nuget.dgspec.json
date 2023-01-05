@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Thabis Documents\\Projects\\NETCore5\\PayPal_integration\\PayPal_integration.csproj": {}
+    "E:\\Thabis Documents\\Projects\\NETCore5\\paypal_integration\\PayPal_integration.csproj": {}
   },
   "projects": {
-    "E:\\Thabis Documents\\Projects\\NETCore5\\PayPal_integration\\PayPal_integration.csproj": {
+    "E:\\Thabis Documents\\Projects\\NETCore5\\paypal_integration\\PayPal_integration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Thabis Documents\\Projects\\NETCore5\\PayPal_integration\\PayPal_integration.csproj",
+        "projectUniqueName": "E:\\Thabis Documents\\Projects\\NETCore5\\paypal_integration\\PayPal_integration.csproj",
         "projectName": "PayPal_integration",
-        "projectPath": "E:\\Thabis Documents\\Projects\\NETCore5\\PayPal_integration\\PayPal_integration.csproj",
+        "projectPath": "E:\\Thabis Documents\\Projects\\NETCore5\\paypal_integration\\PayPal_integration.csproj",
         "packagesPath": "C:\\Users\\Thabi.ESQUIRE\\.nuget\\packages\\",
-        "outputPath": "E:\\Thabis Documents\\Projects\\NETCore5\\PayPal_integration\\obj\\",
+        "outputPath": "E:\\Thabis Documents\\Projects\\NETCore5\\paypal_integration\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -42,6 +42,36 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

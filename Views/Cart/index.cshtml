@@ -15,9 +15,9 @@
     <input type="hidden" name="upload" value="1"/>                            
     @foreach (var productInfo in ViewBag.products)
     {
-        <input type="hidden" name="item_number_@i" value="@productInfo.ProdID" />
-        <input type="hidden" name="item_name_@i" value="@Html.Encode(productInfo.Description.ToString()).Substring(0,50)" />
-        <input type="hidden" name="amount_@i" value="@productInfo.PurchasePrice" />
+        <input type="hidden" name="item_number_@i" value="@productInfo.Id" />
+        <input type="hidden" name="item_name_@i" value="@productInfo.Name" />
+        <input type="hidden" name="amount_@i" value="@productInfo.Price" />
         <input type="hidden" name="quantity_@i" value="@productInfo.Quantity" />
         i++;
     }
